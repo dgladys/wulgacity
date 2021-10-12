@@ -131,7 +131,6 @@ for word in words:
 
 	
 def normalize_city(city):
-	#city = city.replace("Ą", "A").replace("ą", "a").replace("Ę", "E").replace("ę", "e").replace("Ł", "L").replace("ł", "l").replace("Ś", "S").replace("ś", "s").replace("Ć", "C").replace("ć", "c").replace("Ż", 'Z').replace("ż", "z").replace("Ź", "Z").replace("Ń", "N").replace("ń", "n")
 	city = city.strip().lower()
 	return city
 
@@ -151,5 +150,3 @@ for city in lines:
 	
 
 f.close()
-
-#time.sleep(3)
