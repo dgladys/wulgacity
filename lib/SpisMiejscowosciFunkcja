@@ -1,7 +1,0 @@
-
-def miasta (x):
-    f = open("SpisMiejscowosci.txt", "r", encoding="windows-1250")
-    lines = f.readlines()
-    f.close()    
-    return lines
-    
