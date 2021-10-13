@@ -1,4 +1,5 @@
 from lib.Functions import normalize_city
+from lib.Functions import sort_string
 
 
 class VulgFinder:
@@ -21,7 +22,7 @@ class VulgFinder:
         result_dictionary = {}
         for city in self.cities_list:
             city = normalize_city(city)
-            sorted_city = "".join(sorted(city))
+            sorted_city = sort_string(city)
             if sorted_city in vulgarism_dictionary:
                 result_dictionary[city] = vulgarism_dictionary[sorted_city]
         return result_dictionary
@@ -30,5 +31,5 @@ class VulgFinder:
         vulgarisms_dict = {}
         for vulgarism in self.vulgarisms_list:
             vulgarism = vulgarism.strip()
-            vulgarisms_dict["".join(sorted(vulgarism))] = vulgarism
+            vulgarisms_dict[sort_string(vulgarism)] = vulgarism
         return vulgarisms_dict

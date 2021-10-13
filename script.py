@@ -1,9 +1,8 @@
-import time
-from lib.Functions import readLines
+from lib.Functions import read_lines
 from lib.VulgFinder import VulgFinder
 
-cities = readLines("SpisMiejscowosci.txt")
-vulgarisms = readLines("SpisWulgaryzmow.txt")
+cities = read_lines("SpisMiejscowosci.txt")
+vulgarisms = read_lines("SpisWulgaryzmow.txt")
 
 finder = VulgFinder()
 finder.set_cities(cities)
